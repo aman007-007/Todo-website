@@ -13,6 +13,6 @@ after create database create two tables
    -------------description
    ---------priority
    -------------status
-   NOTE -- write everything like writtern above dont change word accrding to you like Regitration first capital and task every word small
+   NOTE -- write everything like writtern above dont change word accrding to you like Registration first word capital and task every word small
 
    click on database folder then click on db.py put your database name and password
