@@ -1,0 +1,43 @@
+body{
+    height:100%;
+    margin:0;
+    padding:0;
+    background-image:url('bg.png');
+    background-size:cover;
+}
+
+.box{
+    height: 90vh;
+    width:80%;
+    margin-left: 8%;
+    margin-top: 2%;
+    border: 2px solid black;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 12px 20px;
+    font-size: 18px;
+}
+
+th {
+    background-color: steelblue;
+    color: white;
+}

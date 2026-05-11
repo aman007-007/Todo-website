@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel ="stylesheet" href="{{url_for('static', filename='log.css')}}">
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <div class="boxa">    
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <p style="color: red;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+     
+    <div class="boxb">
+        <div class="boxc"></div>
+        <div class="boxd">
+            <h2 class="log_title">Login Page</h2>
+
+            <form action="/submit_login" method="POST">
+                
+                <input class="a" type="text" name="email" placeholder="Enter your email" required><br><br>
+                <input  class="a" type="password" name="password" placeholder="Enter your password" required><br><br>
+
+                <button  class="log_button" type="submit">Login</button>
+
+            </form>
+
+            <br>
+
+            <a href="/reg" ><button class="reg_button"> Register</button></a>
+        </div>
+        
+    </div>
+    
+
+</body>
+</html>

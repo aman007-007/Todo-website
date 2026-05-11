@@ -1,0 +1,80 @@
+/* REGISTER PAGE */
+body{
+    height:100%;
+    margin:0;
+    padding:0;
+    background-image:url('bg.png');
+    background-size:cover;
+}
+
+.boxa{
+    height:10%;
+    width:90%;
+    margin-top:30px;
+    margin-left:40%;
+    display:flex;
+
+}
+
+.boxb{
+    width:70%;
+    margin-top:3%;
+    margin-right:25%;
+    margin-bottom: 25px;
+    margin-left:13%;
+    border-radius: 15px;
+    background-color:white;
+    height:80vh;
+    display: flex;
+}
+.boxc{
+    height: 90%;
+    width: 50%;
+    border-radius: 15px;
+    margin-top:30px;
+    margin-left:45px;
+    background-image:url('n.png');
+    background-size:cover;
+    background-position:center;
+}
+    
+
+.boxd{
+    width:50%;
+    height:100%;
+}
+
+.reg_title{
+    font-size: 12px bold;
+    color:rgb(52, 52, 196);
+    margin-left:30%;
+}
+.a{
+    height:30px;
+    width:80%;
+    margin-top:20px;
+    margin-left:10%;
+    font-size:25px;
+}
+
+.reg_button{
+    height:35px;
+    width:81%;
+    margin-left:10%;
+    border-radius: 5px;
+    font-size: bold 15px;
+    color:rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(13, 85, 162);
+}
+.log_button{
+    height:50px;
+    margin-top:20px;
+    width:100px;
+    margin-left:40%;
+    border-radius: 5px;
+    font-size: 15px;
+    color:black;
+    background-color: rgb(194, 38, 38);
+
+}

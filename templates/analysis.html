@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Data</title>
+    <link rel ="stylesheet" href="{{url_for('static', filename='ana.css')}}">
+    <link rel="stylesheet" href="ana.css">
+</head>
+<body>
+    <div class="box">
+        <h2>Analysis Data</h2>
+        {{ table | safe }}
+   </div>
+</body>
+</html>

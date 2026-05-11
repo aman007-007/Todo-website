@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel ="stylesheet" href="{{url_for('static', filename='reg.css')}}">
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <div class="boxa">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <p style="color: red;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="boxb">
+        <div class="boxc">
+        </div>
+
+       <div class="boxd">    
+            <h1 class="reg_title">Register Page</h1>
+
+            <form action="/submit_registration" method="POST">
+                <input class="a" type="text" name="username" placeholder="Enter your username" required><br><br>
+                <input class="a" type="email" name="email" placeholder="Enter your email" required><br><br>
+                <input class="a" type="password" name="password" placeholder="Enter your password" required><br><br>
+
+                <button class="reg_button" type="submit">Register</button>
+
+            </form>
+
+            <br>
+
+            <a href="/login" ><button class="log_button">Login</button></a>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>

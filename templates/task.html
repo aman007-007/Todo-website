@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="{{url_for('static', filename='task.css')}}">
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="boxa">
+        <h1 class="todo">My Todo</h1>
+            <form action="/add_task" method="POST">
+            <input class="box" type ="text" name ="title" placeholder="enter Title" required>
+            <input  class="box" type ="text" name ="description" placeholder="enter description" required>
+            <input class="box"  type ="text" name ="priority" placeholder="high/low/medium" required>
+            <button class="add" type="submit">ADD</button>
+        
+
+            </form><br>
+            <a href="/analysis"><button class="analysis">Analysis</button></a>
+            <a href="/reg" ><button class="logout">Logout</button></a>
+            
+    </div>
+    <div class="boxb">
+        <form action="/clear">
+        <button class="clear" type="submit">CLEAR ALL TASK</button>
+
+    </form>
+    <div class="boxc"><table>
+            <tr>
+                <th>id</th>
+                <th class="table">Title</th>
+                <th class="table">Description</th>
+                <th class="table">Priority</th>
+                <th class="table">Status</th>
+                <th class="table">Change</th>
+                <th class="table">Delete</th>
+            </tr>
+            {% for row in data %}
+            <tr>
+                <td >{{ row[0] }}</td>
+                <td class="table">{{ row[1] }}</td>
+                <td class="table">{{ row[2] }}</td>
+                <td class="table">{{ row[3] }}</td>
+                <td class="table">{{ row[4] }}</td>
+                <td class="table"><form action="/change/{{row[0]}}" method="POST">
+                    <button type ="submit">CHANGE</button></form></td>
+                <td class="table"><form action="/delete/{{row[0]}}" method="POST">
+                    <button type ="submit">DELETE</button></form></td>
+                
+                
+            </tr>
+            {% endfor %}
+            
+        </table></div>
+        
+    </div>
+    
+</body>
+</html>
