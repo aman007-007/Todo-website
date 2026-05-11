@@ -7,7 +7,7 @@ def get_db():
         port="5432",
         dbname="postgres",
         user="postgres",
-        password="aMANKHATAULI251201"
+        password=""
     )
 
 
